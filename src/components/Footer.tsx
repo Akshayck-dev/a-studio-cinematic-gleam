@@ -7,6 +7,7 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Logo */}
+<<<<<<< HEAD
           <div className="flex flex-col leading-tight">
             <span className="text-3xl md:text-4xl font-poppins font-bold text-primary">
               3Frames
@@ -14,6 +15,10 @@ const Footer = () => {
             <span className="text-base md:text-lg font-lora italic text-foreground/90 -mt-1">
               RewindMoments
             </span>
+=======
+          <div className="text-2xl font-poppins font-bold text-primary">
+            3Frames RewindMoments
+>>>>>>> a12526b24a62f8899472a3cc2a31443bacf11958
           </div>
 
           {/* Social Links */}

@@ -124,8 +124,13 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-poppins font-semibold text-foreground mb-1">Email</h3>
+<<<<<<< HEAD
                     <a href="mailto:info@3framesrewindmoments.com" className="text-muted-foreground hover:text-primary transition-colors">
                       info@3framesrewindmoments.com
+=======
+                    <a href="mailto:info@3framesrewind.com" className="text-muted-foreground hover:text-primary transition-colors">
+                      info@3framesrewind.com
+>>>>>>> a12526b24a62f8899472a3cc2a31443bacf11958
                     </a>
                   </div>
                 </div>
