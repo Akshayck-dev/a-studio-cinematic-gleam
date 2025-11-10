@@ -3,7 +3,13 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import heroImage from "@/assets/hero-bg.jpg";
+import wedding1 from "@/assets/portfolio-wedding-1.jpg";
+import wedding2 from "@/assets/portfolio-wedding-2.jpg";
+import portrait1 from "@/assets/portfolio-portrait-1.jpg";
+import portrait2 from "@/assets/portfolio-portrait-2.jpg";
+import event1 from "@/assets/portfolio-event-1.jpg";
 
 const Home = () => {
   return (
@@ -70,6 +76,102 @@ const Home = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* 3Frames RewindMoments - Highlights Carousel */}
+      <section className="py-24 px-6">
+        <div className="container mx-auto">
+          <div className="text-center mb-16 animate-fade-in-up">
+            <h2 className="text-4xl md:text-5xl font-poppins font-bold mb-6 text-foreground text-shadow-gold">
+              3Frames RewindMoments
+            </h2>
+            <p className="text-xl text-muted-foreground font-lora max-w-2xl mx-auto">
+              Capturing the essence of every moment, one frame at a time
+            </p>
+          </div>
+
+          <Carousel className="w-full max-w-6xl mx-auto">
+            <CarouselContent>
+              <CarouselItem>
+                <div className="relative h-[500px] rounded-lg overflow-hidden">
+                  <img
+                    src={wedding1}
+                    alt="Wedding Highlight"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-8">
+                    <div>
+                      <h3 className="text-3xl font-poppins font-bold text-foreground mb-2">Timeless Weddings</h3>
+                      <p className="text-lg text-muted-foreground">Every love story deserves to be told beautifully</p>
+                    </div>
+                  </div>
+                </div>
+              </CarouselItem>
+              <CarouselItem>
+                <div className="relative h-[500px] rounded-lg overflow-hidden">
+                  <img
+                    src={portrait1}
+                    alt="Portrait Highlight"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-8">
+                    <div>
+                      <h3 className="text-3xl font-poppins font-bold text-foreground mb-2">Expressive Portraits</h3>
+                      <p className="text-lg text-muted-foreground">Revealing the soul behind every smile</p>
+                    </div>
+                  </div>
+                </div>
+              </CarouselItem>
+              <CarouselItem>
+                <div className="relative h-[500px] rounded-lg overflow-hidden">
+                  <img
+                    src={event1}
+                    alt="Event Highlight"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-8">
+                    <div>
+                      <h3 className="text-3xl font-poppins font-bold text-foreground mb-2">Memorable Events</h3>
+                      <p className="text-lg text-muted-foreground">Preserving the energy of your special moments</p>
+                    </div>
+                  </div>
+                </div>
+              </CarouselItem>
+              <CarouselItem>
+                <div className="relative h-[500px] rounded-lg overflow-hidden">
+                  <img
+                    src={wedding2}
+                    alt="Wedding Highlight 2"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-8">
+                    <div>
+                      <h3 className="text-3xl font-poppins font-bold text-foreground mb-2">Elegant Celebrations</h3>
+                      <p className="text-lg text-muted-foreground">Where elegance meets emotion</p>
+                    </div>
+                  </div>
+                </div>
+              </CarouselItem>
+              <CarouselItem>
+                <div className="relative h-[500px] rounded-lg overflow-hidden">
+                  <img
+                    src={portrait2}
+                    alt="Portrait Highlight 2"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-8">
+                    <div>
+                      <h3 className="text-3xl font-poppins font-bold text-foreground mb-2">Creative Vision</h3>
+                      <p className="text-lg text-muted-foreground">Artistry in every frame</p>
+                    </div>
+                  </div>
+                </div>
+              </CarouselItem>
+            </CarouselContent>
+            <CarouselPrevious className="left-4" />
+            <CarouselNext className="right-4" />
+          </Carousel>
         </div>
       </section>
 
@@ -218,6 +320,58 @@ const Home = () => {
                 <div className="text-muted-foreground font-lora">{stat.label}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Studio Location */}
+      <section className="py-24 px-6 bg-secondary">
+        <div className="container mx-auto">
+          <div className="text-center mb-16 animate-fade-in-up">
+            <h2 className="text-4xl md:text-5xl font-poppins font-bold mb-6 text-foreground">
+              Visit Our Studio
+            </h2>
+            <p className="text-xl text-muted-foreground font-lora max-w-2xl mx-auto">
+              Come and explore our creative space
+            </p>
+          </div>
+
+          <div className="max-w-5xl mx-auto bg-card rounded-lg overflow-hidden shadow-subtle">
+            <div className="aspect-video w-full">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.9793181711375!2d77.3410478!3d28.6129598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a43173357b%3A0x37ffce30c87cc03f!2sNoida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1234567890"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-full"
+              />
+            </div>
+            <div className="p-8 bg-card">
+              <h3 className="text-2xl font-poppins font-bold mb-4 text-foreground">3Frames RewindMoments Studio</h3>
+              <p className="text-muted-foreground font-lora mb-6">
+                Visit us at our creative studio where we bring your vision to life. Schedule an appointment to discuss your photography needs.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a 
+                  href="https://www.google.com/maps/search/?api=1&query=Noida+Uttar+Pradesh" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block"
+                >
+                  <Button size="lg" className="w-full sm:w-auto shadow-gold">
+                    Get Directions
+                  </Button>
+                </a>
+                <Link to="/contact">
+                  <Button size="lg" variant="secondary" className="w-full sm:w-auto border-primary hover:bg-primary/10">
+                    Contact Us
+                  </Button>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>

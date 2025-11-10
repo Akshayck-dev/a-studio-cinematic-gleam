@@ -68,18 +68,18 @@ const Portfolio = () => {
       {/* Gallery Grid */}
       <section className="py-16 px-6">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
             {filteredItems.map((item, index) => (
               <div
                 key={item.id}
-                className="group relative overflow-hidden rounded-lg cursor-pointer hover-lift animate-fade-in-up"
+                className="break-inside-avoid group relative overflow-hidden rounded-lg cursor-pointer hover-lift animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
                 onClick={() => setSelectedImage(item.image)}
               >
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
@@ -95,13 +95,15 @@ const Portfolio = () => {
 
       {/* Lightbox Dialog */}
       <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
-        <DialogContent className="max-w-6xl p-0 bg-transparent border-0">
+        <DialogContent className="max-w-7xl max-h-[90vh] p-0 bg-background/95 border border-border overflow-hidden">
           {selectedImage && (
-            <img
-              src={selectedImage}
-              alt="Portfolio item"
-              className="w-full h-auto rounded-lg"
-            />
+            <div className="relative flex items-center justify-center p-4">
+              <img
+                src={selectedImage}
+                alt="Portfolio item"
+                className="max-h-[85vh] w-auto object-contain rounded-lg"
+              />
+            </div>
           )}
         </DialogContent>
       </Dialog>
