@@ -12,11 +12,7 @@ const About = () => {
       <section className="pt-32 pb-16 px-6 bg-gradient-hero">
         <div className="container mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-poppins font-bold mb-6 text-foreground text-shadow-gold">
-<<<<<<< HEAD
             About <span className="text-primary">3Frames</span>
-=======
-            About 3Frames RewindMoments
->>>>>>> a12526b24a62f8899472a3cc2a31443bacf11958
           </h1>
           <h2 className="text-3xl md:text-4xl font-lora italic text-foreground/90 -mt-2 mb-6">
             RewindMoments

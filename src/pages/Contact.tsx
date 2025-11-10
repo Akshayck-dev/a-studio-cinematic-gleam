@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -9,11 +9,17 @@ import { Instagram, MessageCircle, Mail, MapPin, Phone } from "lucide-react";
 
 const Contact = () => {
   const { toast } = useToast();
+  const [mapKey, setMapKey] = useState(0);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: ""
   });
+
+  // Force map to reload when component mounts
+  useEffect(() => {
+    setMapKey(prev => prev + 1);
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -124,13 +130,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-poppins font-semibold text-foreground mb-1">Email</h3>
-<<<<<<< HEAD
                     <a href="mailto:info@3framesrewindmoments.com" className="text-muted-foreground hover:text-primary transition-colors">
                       info@3framesrewindmoments.com
-=======
-                    <a href="mailto:info@3framesrewind.com" className="text-muted-foreground hover:text-primary transition-colors">
-                      info@3framesrewind.com
->>>>>>> a12526b24a62f8899472a3cc2a31443bacf11958
                     </a>
                   </div>
                 </div>
@@ -151,12 +152,20 @@ const Contact = () => {
                   <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                     <MapPin className="text-primary" size={20} />
                   </div>
+
                   <div>
                     <h3 className="font-poppins font-semibold text-foreground mb-1">Location</h3>
-                    <p className="text-muted-foreground">
-                      123 Photography Lane<br />
-                      Creative District, NY 10001
-                    </p>
+                    <a 
+                      href="https://www.google.com/maps/place/2nd+floor,+3Framesrewindmoments,+GNR+building,+Balaji+Layout,+Banaswadi,+Bengaluru,+Karnataka+560043/@13.0114005,77.6487783,15z/data=!4m6!3m5!1s0x3bae177dcbd1c0af:0x594c777e014ce62f!8m2!3d13.010412!4d77.6480357!16s%2Fg%2F11s0vj686c?g_ep=Eg1tbF8yMDI1MTEwM18wIOC7DCoASAJQAg%3D%3D"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-primary transition-colors block"
+                    >
+                      2nd Floor, 3Frames RewindMoments<br />
+                      GNR Building, Balaji Layout<br />
+                      Banaswadi, Bengaluru<br />
+                      Karnataka 560043, India
+                    </a>
                   </div>
                 </div>
               </div>
@@ -187,6 +196,41 @@ const Contact = () => {
                   </a>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Map Section */}
+      <section className="py-12 px-6 bg-secondary">
+        <div className="container mx-auto">
+          <div className="animate-fade-in-up">
+            <h2 className="text-3xl font-poppins font-bold mb-6 text-center text-foreground">
+              Find Us
+            </h2>
+            <div className="rounded-lg overflow-hidden shadow-subtle border border-border h-[450px] bg-card">
+              <iframe
+                key={`map-${mapKey}`}
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15549.523497480062!2d77.6487783!3d13.0114005!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae177dcbd1c0af%3A0x594c777e014ce62f!2s3Framesrewindmoments!5e0!3m2!1sen!2sin!4v1762769604892!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="eager"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-full"
+                title="3Frames RewindMoments Location"
+              />
+            </div>
+            <div className="mt-4 text-center">
+              <a
+                href="https://www.google.com/maps/place/2nd+floor,+3Framesrewindmoments,+GNR+building,+Balaji+Layout,+Banaswadi,+Bengaluru,+Karnataka+560043/@13.0114005,77.6487783,15z/data=!4m6!3m5!1s0x3bae177dcbd1c0af:0x594c777e014ce62f!8m2!3d13.010412!4d77.6480357!16s%2Fg%2F11s0vj686c?g_ep=Eg1tbF8yMDI1MTEwM18wIOC7DCoASAJQAg%3D%3D"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:text-primary/80 transition-colors font-poppins text-sm"
+              >
+                View on Google Maps →
+              </a>
             </div>
           </div>
         </div>
