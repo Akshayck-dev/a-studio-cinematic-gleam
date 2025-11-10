@@ -35,8 +35,13 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-poppins font-bold text-primary hover:text-primary/80 transition-colors">
-            A-Studio
+          <Link to="/" className="flex flex-col leading-tight hover:opacity-80 transition-opacity">
+            <span className="text-3xl md:text-4xl font-poppins font-bold text-primary">
+              3Frames
+            </span>
+            <span className="text-base md:text-lg font-lora italic text-foreground/90 -mt-1">
+              RewindMoments
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

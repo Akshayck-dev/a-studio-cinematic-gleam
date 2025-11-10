@@ -155,7 +155,7 @@ const Home = () => {
               {
                 name: "Emily & James",
                 role: "Wedding Clients",
-                text: "A-Studio captured our special day perfectly. Every moment, every emotion - they didn't miss a thing. The photos are absolutely stunning and we'll treasure them forever.",
+                text: "3Frames RewindMoments captured our special day perfectly. Every moment, every emotion - they didn't miss a thing. The photos are absolutely stunning and we'll treasure them forever.",
                 rating: 5
               },
               {

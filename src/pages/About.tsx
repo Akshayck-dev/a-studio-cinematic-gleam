@@ -12,8 +12,11 @@ const About = () => {
       <section className="pt-32 pb-16 px-6 bg-gradient-hero">
         <div className="container mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-poppins font-bold mb-6 text-foreground text-shadow-gold">
-            About A-Studio
+            About <span className="text-primary">3Frames</span>
           </h1>
+          <h2 className="text-3xl md:text-4xl font-lora italic text-foreground/90 -mt-2 mb-6">
+            RewindMoments
+          </h2>
           <p className="text-xl text-muted-foreground font-lora max-w-2xl mx-auto">
             Where passion meets professionalism
           </p>
@@ -40,7 +43,7 @@ const About = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground font-lora text-lg leading-relaxed">
                 <p>
-                  Founded in 2015, A-Studio has been dedicated to capturing the most precious moments 
+                  Founded in 2015, 3Frames RewindMoments has been dedicated to capturing the most precious moments 
                   of life through the art of photography. What started as a passion project has grown 
                   into a full-service photography studio serving clients worldwide.
                 </p>
