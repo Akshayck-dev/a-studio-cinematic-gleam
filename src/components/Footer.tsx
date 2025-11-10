@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Logo */}
           <div className="text-2xl font-poppins font-bold text-primary">
-            A-Studio
+            3Frames RewindMoments
           </div>
 
           {/* Social Links */}
@@ -53,7 +53,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="text-center mt-8 text-muted-foreground text-sm font-poppins">
-          © 2025 A-Studio. All rights reserved.
+          © 2025 3Frames RewindMoments. All rights reserved.
         </div>
       </div>
     </footer>
